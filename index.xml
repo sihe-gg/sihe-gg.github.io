@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>LoveIt</title>
+        <link>https://sihe-gg.github.io/</link>
+        <description>Hugo theme - LoveIt</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 26 Mar 2019 08:47:11 &#43;0100</lastBuildDate>
+            <atom:link href="https://sihe-gg.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>My First Post</title>
+    <link>https://sihe-gg.github.io/my-first-post/</link>
+    <pubDate>Tue, 26 Mar 2019 08:47:11 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>https://sihe-gg.github.io/my-first-post/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
