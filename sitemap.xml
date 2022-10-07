@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://sihe-gg.github.io/en/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://sihe-gg.github.io/zh-cn/sitemap.xml</loc>
-    
-      <lastmod>2019-03-26T08:47:11+01:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>http://sihe-gg.github.io/categories/</loc></url><url>
+            <loc>http://sihe-gg.github.io/</loc></url><url>
+            <loc>http://sihe-gg.github.io/tags/</loc></url></urlset>
