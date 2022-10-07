@@ -1,10 +1,16 @@
-<urlset
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    ><url>
-            <loc>http://sihe-gg.github.io/posts/my-second-post/</loc><lastmod>2022-10-07T12:45:31&#43;08:00</lastmod></url><url>
-            <loc>http://sihe-gg.github.io/</loc><lastmod>2022-10-07T12:45:31&#43;08:00</lastmod></url><url>
-            <loc>http://sihe-gg.github.io/posts/</loc><lastmod>2022-10-07T12:45:31&#43;08:00</lastmod></url><url>
-            <loc>http://sihe-gg.github.io/posts/my-first-post/</loc><lastmod>2022-10-07T11:41:37&#43;08:00</lastmod></url><url>
-            <loc>http://sihe-gg.github.io/categories/</loc></url><url>
-            <loc>http://sihe-gg.github.io/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://sihe-gg.github.io/en/sitemap.xml</loc>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://sihe-gg.github.io/zh-cn/sitemap.xml</loc>
+    
+      <lastmod>2022-10-07T12:45:31+08:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>
