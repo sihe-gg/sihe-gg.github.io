@@ -49,7 +49,7 @@ hugo new site hugo-site
 ```
 
 <aside>
-💡 之后添加博客主题，这里我选用的是 LoveIt 主题，更多精美主题可前往 [https://themes.gohugo.io/](https://themes.gohugo.io/) 查看。
+💡 之后添加博客主题，这里我选用的是 LoveIt 主题，更多精美主题可前往 https://themes.gohugo.io/ 查看。
 
 </aside>
 
