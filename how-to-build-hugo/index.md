@@ -1,6 +1,6 @@
-# 
+# Hugo 博客搭建 + 使用 Github 部署作为自己的站点
 
-# Hugo 博客搭建 + 利用 Github 部署自己的站点
+# Hugo 博客搭建 + 使用 Github 部署作为自己的站点
 
 ## 一、概述
 
@@ -313,3 +313,5 @@ git push
 ```
 
 大功告成了，输入网址 [yourname.github.io](http://yourname.github.io) ，现在快去看看你的博客吧，let`s go！
+
+

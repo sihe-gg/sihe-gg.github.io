@@ -3,15 +3,15 @@
         <title>pinkman`s blog</title>
         <link>http://sihe-gg.github.io/</link>
         <description>this is pinkman`s blog, welcome! :)</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 09 Oct 2022 17:12:41 &#43;0800</lastBuildDate>
             <atom:link href="http://sihe-gg.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title></title>
-    <link>http://sihe-gg.github.io/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA--%E5%88%A9%E7%94%A8-github-%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AB%99%E7%82%B9/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <title>Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点</title>
+    <link>http://sihe-gg.github.io/how-to-build-hugo/</link>
+    <pubDate>Sun, 09 Oct 2022 17:12:41 &#43;0800</pubDate>
     <author>pinkman</author>
-    <guid>http://sihe-gg.github.io/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA--%E5%88%A9%E7%94%A8-github-%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AB%99%E7%82%B9/</guid>
-    <description><![CDATA[Hugo 博客搭建 + 利用 Github 部署自己的站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以供参考。 博客框架选择]]></description>
+    <guid>http://sihe-gg.github.io/how-to-build-hugo/</guid>
+    <description><![CDATA[Hugo 博客搭建 + 使用 Github 部署作为自己的站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以供参考。 博客框架]]></description>
 </item>
 </channel>
 </rss>
