@@ -11,8 +11,8 @@
 搭建环境:
 
 - 操作系统: Ubuntu 18.04
-- 博客框架: Hugo    https://github.com/gohugoio/hugo
-- 博客主题: LoveIt  https://github.com/dillonzq/LoveIt
+- 博客框架: [Hugo](https://github.com/gohugoio/hugo)
+- 博客主题: [LoveIt](https://github.com/dillonzq/LoveIt)
 - 工具: Git
 
 ## 二、博客搭建
@@ -49,7 +49,7 @@ hugo new site hugo-site
 ```
 
 <aside>
-💡 之后添加博客主题，这里我选用的是 LoveIt 主题，更多精美主题可前往 https://themes.gohugo.io/ 查看。
+💡 之后添加博客主题，这里我选用的是 LoveIt 主题，更多精美主题可前往 [主题](https://themes.gohugo.io) 查看。
 
 </aside>
 
@@ -71,7 +71,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 hugo new posts/my-first-post.md
 ```
 
-2、使用 vim 打开 [my-first-post.md](http://my-first-post.md) 会看到 draft: true。
+2、使用 vim 打开 my-first-post.md 会看到 draft: true。
 
 - 草稿不会被部署，一旦完成文章，更新草稿头部的 draft: false 即可在发布博客时显示文章。
 
@@ -170,7 +170,7 @@ ssh -T git@github.com
 
 ![Untitled](../images/Untitled%206.png)
 
- 3、在 Repository name 一栏填写你的 Github 名称 + github.io，eg: sihe-gg.github.io。我已经创建过了，所以填写了 [yourname.github.io](http://yourname.github.io)，把 yourname 换成你的 github 名称。
+ 3、在 Repository name 一栏填写你的 Github 名称 + github.io，eg: sihe-gg.github.io。我已经创建过了，所以填写了 yourname.github.io，把 yourname 换成你的 github 名称。
 
 ![Untitled](../images/Untitled%207.png)
 
