@@ -48,10 +48,7 @@ echo "export PATH=$PATH:/home/jaks/hugo" >> ~/.bashrc
 hugo new site hugo-site
 ```
 
-<aside>
-💡 之后添加博客主题，这里我选用的是 LoveIt 主题，更多精美主题可前往 [主题](https://themes.gohugo.io) 查看。
-
-</aside>
+- 之后添加博客主题，这里我选用的是 LoveIt 主题，更多精美主题可前往 [主题](https://themes.gohugo.io) 查看。
 
 2、进入你的 hugo-site 目录，使用 Git 初始化目录，然后从 Github 下载主题到站点的 themes 目录。
 
