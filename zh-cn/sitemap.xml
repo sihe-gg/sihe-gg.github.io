@@ -2,18 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://sihe-gg.github.io/my-second-post/</loc><lastmod>2022-10-07T12:45:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://sihe-gg.github.io/</loc><lastmod>2022-10-07T12:45:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="http://sihe-gg.github.io/en/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="http://sihe-gg.github.io/"
-                    /></url><url>
-            <loc>http://sihe-gg.github.io/posts/</loc><lastmod>2022-10-07T12:45:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://sihe-gg.github.io/my-first-post/</loc><lastmod>2022-10-07T11:41:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://sihe-gg.github.io/hugo-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA--%E5%88%A9%E7%94%A8-github-%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84%E7%AB%99%E7%82%B9/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://sihe-gg.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -23,6 +12,16 @@
                     hreflang="zh-cn"
                     href="http://sihe-gg.github.io/categories/"
                     /></url><url>
+            <loc>http://sihe-gg.github.io/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://sihe-gg.github.io/en/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://sihe-gg.github.io/"
+                    /></url><url>
+            <loc>http://sihe-gg.github.io/posts/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://sihe-gg.github.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
