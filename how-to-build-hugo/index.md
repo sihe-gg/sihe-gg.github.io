@@ -21,7 +21,7 @@
 
 1、首先进入到 Hugo Github 下载 Releases 最新版本，我用的是 v0.104.3。
 
-![Untitled](./images/Untitled.png)
+![Untitled](../images/Untitled.png)
 
 - 我下载的是 hugo_0.104.3_linux-amd64.tar.gz，Intel 使用 amd 安装包，AMD 选择 arm 安装包，window 用户选择对应 window 安装包即可，不确定自己的 cpu 架构可以在 Linux 系统下输入 uname -m 查看。关于 amd 与 arm 更多知识请看____。（埋坑）
 
