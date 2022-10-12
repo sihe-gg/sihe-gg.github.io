@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点 - pinkman`s blog</title><meta name="Description" content="this is pinkman`s blog, welcome! :)"><meta property="og:title" content="Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点" />
-<meta property="og:description" content="Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以供参考。 博客框架" />
+<meta property="og:description" content="Hugo 博客搭建 &#43; 使用 Github Page 部署作为站点并用 Github Action 自动部署站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://sihe-gg.github.io/how-to-build-hugo/" /><meta property="og:image" content="http://sihe-gg.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-09T17:12:41+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="http://sihe-gg.github.io/logo.png"/>
 
 <meta name="twitter:title" content="Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点"/>
-<meta name="twitter:description" content="Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以供参考。 博客框架"/>
+<meta name="twitter:description" content="Hugo 博客搭建 &#43; 使用 Github Page 部署作为站点并用 Github Action 自动部署站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/sihe-gg.github.io\/how-to-build-hugo\/"
-        },"image": ["http:\/\/sihe-gg.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  2279 ,
+        },"image": ["http:\/\/sihe-gg.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  2771 ,
         "url": "http:\/\/sihe-gg.github.io\/how-to-build-hugo\/","datePublished": "2022-10-09T17:12:41+08:00","dateModified": "2022-10-09T17:12:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "http:\/\/sihe-gg.github.io\/images\/avatar.png"},"author": {
@@ -110,8 +110,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo 博客搭建 + 使用 Github 部署作为自己的站点</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>pinkman</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-09">2022-10-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2279 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/how-to-build-hugo/" class="leancloud_visitors" data-flag-title="Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-09">2022-10-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2771 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/how-to-build-hugo/" class="leancloud_visitors" data-flag-title="Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -124,21 +124,23 @@
     <li><a href="#一概述">一、概述</a></li>
     <li><a href="#二博客搭建">二、博客搭建</a>
       <ul>
-        <li><a href="#一hugo-框架下载">（一）、Hugo 框架下载</a></li>
-        <li><a href="#二hugo-框架配置">（二）、Hugo 框架配置</a></li>
-        <li><a href="#三添加一些内容">（三）、添加一些内容</a></li>
-        <li><a href="#四启动-hugo-服务">（四）、启动 hugo 服务</a></li>
+        <li><a href="#一hugo-框架下载">（一）Hugo 框架下载</a></li>
+        <li><a href="#二hugo-框架配置">（二）Hugo 框架配置</a></li>
+        <li><a href="#三添加一些内容">（三）添加一些内容</a></li>
+        <li><a href="#四启动-hugo-服务">（四）启动 hugo 服务</a></li>
       </ul>
     </li>
     <li><a href="#三使用-github-作为博客站点">三、使用 Github 作为博客站点</a>
       <ul>
-        <li><a href="#一配置-github-ssh-key">（一）、配置 Github SSH key</a></li>
-        <li><a href="#二创建-github-page-页面">（二）、创建 Github Page 页面</a></li>
+        <li><a href="#一配置-github-ssh-key">（一）配置 Github SSH key</a></li>
+        <li><a href="#二创建-github-page-页面">（二）创建 Github Page 页面</a></li>
+        <li><a href="#三部署博客到-github-page">（三）部署博客到 Github Page</a></li>
       </ul>
     </li>
+    <li><a href="#四使用-github-action-自动部署博客">四、使用 Github Action 自动部署博客</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="hugo-博客搭建--使用-github-部署作为自己的站点">Hugo 博客搭建 + 使用 Github 部署作为自己的站点</h1>
+            </div><div class="content" id="content"><h1 id="hugo-博客搭建--使用-github-page-部署作为站点并用-github-action-自动部署站点">Hugo 博客搭建 + 使用 Github Page 部署作为站点并用 Github Action 自动部署站点</h1>
 <h2 id="一概述">一、概述</h2>
 <p>作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以供参考。</p>
 <p>博客框架选择使用 Go 编写的 Hugo ，它在 Github 上的 Star 63k ，部署在 Github Page ，搭配 Github Action 实现自动化发布博客。</p>
@@ -150,7 +152,7 @@
 <li>工具: Git</li>
 </ul>
 <h2 id="二博客搭建">二、博客搭建</h2>
-<h3 id="一hugo-框架下载">（一）、Hugo 框架下载</h3>
+<h3 id="一hugo-框架下载">（一）Hugo 框架下载</h3>
 <p>1、首先进入到 Hugo Github 下载 Releases 最新版本，我用的是 v0.104.3。</p>
 <p><img
         class="lazyload"
@@ -186,7 +188,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>3、输入 hugo version 打印出版本信息即安装成功。</p>
-<h3 id="二hugo-框架配置">（二）、Hugo 框架配置</h3>
+<h3 id="二hugo-框架配置">（二）Hugo 框架配置</h3>
 <p>1、在 Linux home 目录下使用 hugo 命令创建一个新的站点。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -213,7 +215,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>3、配置文件替换，进入下载的主题找到 exampleSite 目录下的 config.toml 文件复制到 hugo-site 目录。</p>
-<h3 id="三添加一些内容">（三）、添加一些内容</h3>
+<h3 id="三添加一些内容">（三）添加一些内容</h3>
 <p>1、使用 hugo 自带命令创建一个带有固定格式的 .md 文件到 content 目录。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -227,7 +229,7 @@
 <ul>
 <li>草稿不会被部署，一旦完成文章，更新草稿头部的 draft: false 即可在发布博客时显示文章。</li>
 </ul>
-<h3 id="四启动-hugo-服务">（四）、启动 hugo 服务</h3>
+<h3 id="四启动-hugo-服务">（四）启动 hugo 服务</h3>
 <p>1、现在可以启动 hugo 博客查看了！</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -278,12 +280,12 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>博客地址为 <strong><a href="http://localhost:1313/" target="_blank" rel="noopener noreffer ">http://localhost:1313/</a></strong></li>
+<li>博客地址为 http://localhost:1313</li>
 <li>在编辑或者添加新的博客文件时只需要刷新页面即可看到更新。（有时你需要 Ctrl + R  强刷浏览器）。</li>
 </ul>
 <h2 id="三使用-github-作为博客站点">三、使用 Github 作为博客站点</h2>
 <p>到这一步你已经成功完成了 hugo 博客的搭建，现在需要通过域名发布博客让更多的人看到，我选择使用 Github Page 进行博客站点的发布，无需任何费用。</p>
-<h3 id="一配置-github-ssh-key">（一）、配置 Github SSH key</h3>
+<h3 id="一配置-github-ssh-key">（一）配置 Github SSH key</h3>
 <p>1、通过配置 ssh 即可无需输入 账号密码安全访问 repo，进入到 Linux home 目录。输入如下命令生成 ssh key。</p>
 <p>2、首先配置如下命令，如有配置可跳过。</p>
 <div class="highlight"><div class="chroma">
@@ -366,7 +368,7 @@
         data-sizes="auto"
         alt="../images/Untitled%204.png"
         title="Untitled" /></p>
-<h3 id="二创建-github-page-页面">（二）、创建 Github Page 页面</h3>
+<h3 id="二创建-github-page-页面">（二）创建 Github Page 页面</h3>
 <p>1、首先，登录到 Github，右上角头像选择 Your repositories</p>
 <p><img
         class="lazyload"
@@ -394,7 +396,80 @@
         data-sizes="auto"
         alt="../images/Untitled%207.png"
         title="Untitled" /></p>
-<p>4、创建完成你的 Github Page 之后，还记得我们之前说过要用 Github Action 进行自动部署博客吗？再创建一个仓库名为 myBlog，并设为私有 Private</p>
+<h3 id="三部署博客到-github-page">（三）部署博客到 Github Page</h3>
+<p>1、创建完成你的 Github Page 之后，进入到 Linux 命令行，到 hugo-site 目录下输入如下命令生成你的博客页面，同时也会将 ./content 下草稿为 false（draft:  false） 的文章发布。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Start building sites … 
+</span></span><span class="line"><span class="cl">hugo v0.104.3-58b824581360148f2d91f5cc83f69bd22c1aa331 linux/amd64 <span class="nv">BuildDate</span><span class="o">=</span>2022-10-04T14:25:23Z <span class="nv">VendorInfo</span><span class="o">=</span>gohugoio
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                   <span class="p">|</span> EN  <span class="p">|</span> ZH-CN  
+</span></span><span class="line"><span class="cl">-------------------+-----+--------
+</span></span><span class="line"><span class="cl">  Pages            <span class="p">|</span>   <span class="m">7</span> <span class="p">|</span>    <span class="m">10</span>  
+</span></span><span class="line"><span class="cl">  Paginator pages  <span class="p">|</span>   <span class="m">0</span> <span class="p">|</span>     <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">  Non-page files   <span class="p">|</span>   <span class="m">0</span> <span class="p">|</span>     <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">  Static files     <span class="p">|</span> <span class="m">108</span> <span class="p">|</span>   <span class="m">108</span>  
+</span></span><span class="line"><span class="cl">  Processed images <span class="p">|</span>   <span class="m">0</span> <span class="p">|</span>     <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">  Aliases          <span class="p">|</span>   <span class="m">1</span> <span class="p">|</span>     <span class="m">2</span>  
+</span></span><span class="line"><span class="cl">  Sitemaps         <span class="p">|</span>   <span class="m">2</span> <span class="p">|</span>     <span class="m">1</span>  
+</span></span><span class="line"><span class="cl">  Cleaned          <span class="p">|</span>   <span class="m">0</span> <span class="p">|</span>     <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Total in <span class="m">599</span> ms
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2、进入到 ./public 可以看到 hugo 自动生成的博客框架，我们需要做的是把 ./public 目录下的所有文件上传到 yourname.github.io 中。进入到 ./public 输入如下命令。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 初始化 git 仓库</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl"><span class="c1"># 指定远程仓库</span>
+</span></span><span class="line"><span class="cl">git remote add origin git@github.com:yourname/yourname.github.io.git
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加所有文件</span>
+</span></span><span class="line"><span class="cl">git add .   
+</span></span><span class="line"><span class="cl"><span class="c1"># 提交                  </span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;博客页面&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 推送至 Github</span>
+</span></span><span class="line"><span class="cl">git push --set-upstream origin master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>3、大功告成了，输入网址 <a href="http://yourname.github.io" target="_blank" rel="noopener noreffer ">http://yourname.github.io</a> ，现在快去看看你的博客吧，let`s go！</p>
+<p>但是！当我们写完博客文章后，还需要输入 hugo 生成网站，手动切换到 ./public 目录上传，操作比较繁琐，这时我们可以使用 Github Action 自动化操作部署。</p>
+<h2 id="四使用-github-action-自动部署博客">四、使用 Github Action 自动部署博客</h2>
+<p>Github Action 是一个持续集成和持续交付（CI/CD）平台，可用于自动执行构建、测试和部署管道，目前已经有很多开发好的工作流，可以通过简单的配置即可直接使用。</p>
+<p>1、再创建一个仓库名为 myBlog，并设为私有 Private</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -403,7 +478,7 @@
         data-sizes="auto"
         alt="../images/Untitled%208.png"
         title="Untitled" /></p>
-<p>5、现在应该上传我们的 hugo-site 目录到 myBlog 仓库，进入 Linux 界面，找到并进入你的 hugo-site 目录，由于刚才已经使用 git init 命令初始化过该目录，依次使用如下命令上传至 Github 仓库。</p>
+<p>2、现在应该上传我们的 hugo-site 目录到 myBlog 仓库，进入 Linux 界面，找到并进入你的 hugo-site 目录，由于刚才已经使用 git init 命令初始化过该目录，依次使用如下命令上传至 Github 仓库。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -426,7 +501,7 @@
 </span></span><span class="line"><span class="cl">git push --set-upstream origin master
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>6、推送完成后，在 blog-site 目录下新建目录 .github，创建一个自动化发布博客的 .yml 配置文件。</p>
+</div><p>3、推送完成后，在 blog-site 目录下新建目录 .github，创建一个自动化发布博客的 .yml 配置文件。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -439,7 +514,7 @@
 </span></span><span class="line"><span class="cl">vim myAction.yml
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>7、在 myAction.yml 配置文件中填写如下信息。</p>
+</div><p>4、在 myAction.yml 配置文件中填写如下信息。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -536,7 +611,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>8、在配置文件中需要修改的是</p>
+</div><p>5、在配置文件中需要修改的是</p>
 <ul>
 <li>on:
 push:
@@ -562,7 +637,7 @@ deploy:</p>
 <p>PUBLISH_BRANCH： 如上图查看主分支名称填写</p>
 </li>
 </ul>
-<p>9、还差一步，申请 Github token</p>
+<p>6、还差一步，申请 Github token</p>
 <ul>
 <li>进入 Github，右上角头像 → setting</li>
 </ul>
@@ -648,7 +723,7 @@ deploy:</p>
         data-sizes="auto"
         alt="../images/Untitled%2016.png"
         title="Untitled" /></p>
-<p>10、最后，只需要用如下 git 命令上传到 myBlog 库中，每次写完博客文章 git push 推送完成后就可以自动执行 hugo 命令，生成在 public 目录下的所有文件上传至你的 Github Page，自动化生成你的博客网页。</p>
+<p>7、最后，只需要用如下 git 命令上传到 myBlog 库中，每次写完博客文章 git push 推送完成后就可以自动执行 hugo 命令，生成在 public 目录下的所有文件上传至你的 Github Page，自动化生成你的博客网页。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -661,7 +736,7 @@ deploy:</p>
 </span></span><span class="line"><span class="cl">git push
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>大功告成了，输入网址 <a href="http://yourname.github.io" target="_blank" rel="noopener noreffer ">yourname.github.io</a> ，现在快去看看你的博客吧，let`s go！</p>
+</div><p>至此，我们的 Hugo 博客就搭建完成了，每当我们通过 Markdown 语法完成博客内容编辑后，只需要推送至私人仓库，等待几分钟， Github Action 就会自动化发布你的博客，再通过 Github Page 上你的域名去访问更新后的博客。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

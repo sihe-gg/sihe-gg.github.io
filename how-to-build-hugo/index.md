@@ -1,6 +1,6 @@
 # Hugo 博客搭建 + 使用 Github 部署作为自己的站点
 
-# Hugo 博客搭建 + 使用 Github 部署作为自己的站点
+# Hugo 博客搭建 + 使用 Github Page 部署作为站点并用 Github Action 自动部署站点
 
 ## 一、概述
 
@@ -17,7 +17,7 @@
 
 ## 二、博客搭建
 
-### （一）、Hugo 框架下载
+### （一）Hugo 框架下载
 
 1、首先进入到 Hugo Github 下载 Releases 最新版本，我用的是 v0.104.3。
 
@@ -40,7 +40,7 @@ echo "export PATH=$PATH:/home/jaks/hugo" >> ~/.bashrc
 
 3、输入 hugo version 打印出版本信息即安装成功。
 
-### （二）、Hugo 框架配置
+### （二）Hugo 框架配置
 
 1、在 Linux home 目录下使用 hugo 命令创建一个新的站点。
 
@@ -60,7 +60,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 
 3、配置文件替换，进入下载的主题找到 exampleSite 目录下的 config.toml 文件复制到 hugo-site 目录。
 
-### （三）、添加一些内容
+### （三）添加一些内容
 
 1、使用 hugo 自带命令创建一个带有固定格式的 .md 文件到 content 目录。 
 
@@ -72,7 +72,7 @@ hugo new posts/my-first-post.md
 
 - 草稿不会被部署，一旦完成文章，更新草稿头部的 draft: false 即可在发布博客时显示文章。
 
-### （四）、启动 hugo 服务
+### （四）启动 hugo 服务
 
 1、现在可以启动 hugo 博客查看了！
 
@@ -100,14 +100,14 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
 
-- 博客地址为 **[http://localhost:1313/](http://localhost:1313/)**
+- 博客地址为 http://localhost:1313
 - 在编辑或者添加新的博客文件时只需要刷新页面即可看到更新。（有时你需要 Ctrl + R  强刷浏览器）。
 
 ## 三、使用 Github 作为博客站点
 
 到这一步你已经成功完成了 hugo 博客的搭建，现在需要通过域名发布博客让更多的人看到，我选择使用 Github Page 进行博客站点的发布，无需任何费用。
 
-### （一）、配置 Github SSH key
+### （一）配置 Github SSH key
 
 1、通过配置 ssh 即可无需输入 账号密码安全访问 repo，进入到 Linux home 目录。输入如下命令生成 ssh key。
 
@@ -157,7 +157,7 @@ ssh -T git@github.com
 
 ![Untitled](../images/Untitled%204.png)
 
-### （二）、创建 Github Page 页面
+### （二）创建 Github Page 页面
 
 1、首先，登录到 Github，右上角头像选择 Your repositories
 
@@ -171,11 +171,58 @@ ssh -T git@github.com
 
 ![Untitled](../images/Untitled%207.png)
 
-4、创建完成你的 Github Page 之后，还记得我们之前说过要用 Github Action 进行自动部署博客吗？再创建一个仓库名为 myBlog，并设为私有 Private
+### （三）部署博客到 Github Page
+
+1、创建完成你的 Github Page 之后，进入到 Linux 命令行，到 hugo-site 目录下输入如下命令生成你的博客页面，同时也会将 ./content 下草稿为 false（draft:  false） 的文章发布。
+
+```bash
+hugo
+
+Start building sites … 
+hugo v0.104.3-58b824581360148f2d91f5cc83f69bd22c1aa331 linux/amd64 BuildDate=2022-10-04T14:25:23Z VendorInfo=gohugoio
+
+                   | EN  | ZH-CN  
+-------------------+-----+--------
+  Pages            |   7 |    10  
+  Paginator pages  |   0 |     0  
+  Non-page files   |   0 |     0  
+  Static files     | 108 |   108  
+  Processed images |   0 |     0  
+  Aliases          |   1 |     2  
+  Sitemaps         |   2 |     1  
+  Cleaned          |   0 |     0  
+
+Total in 599 ms
+```
+
+2、进入到 ./public 可以看到 hugo 自动生成的博客框架，我们需要做的是把 ./public 目录下的所有文件上传到 yourname.github.io 中。进入到 ./public 输入如下命令。
+
+```bash
+# 初始化 git 仓库
+git init
+# 指定远程仓库
+git remote add origin git@github.com:yourname/yourname.github.io.git
+# 添加所有文件
+git add .   
+# 提交                  
+git commit -m '博客页面'
+# 推送至 Github
+git push --set-upstream origin master
+```
+
+3、大功告成了，输入网址 http://yourname.github.io ，现在快去看看你的博客吧，let`s go！
+
+但是！当我们写完博客文章后，还需要输入 hugo 生成网站，手动切换到 ./public 目录上传，操作比较繁琐，这时我们可以使用 Github Action 自动化操作部署。
+
+## 四、使用 Github Action 自动部署博客
+
+Github Action 是一个持续集成和持续交付（CI/CD）平台，可用于自动执行构建、测试和部署管道，目前已经有很多开发好的工作流，可以通过简单的配置即可直接使用。
+
+1、再创建一个仓库名为 myBlog，并设为私有 Private
 
 ![Untitled](../images/Untitled%208.png)
 
-5、现在应该上传我们的 hugo-site 目录到 myBlog 仓库，进入 Linux 界面，找到并进入你的 hugo-site 目录，由于刚才已经使用 git init 命令初始化过该目录，依次使用如下命令上传至 Github 仓库。
+2、现在应该上传我们的 hugo-site 目录到 myBlog 仓库，进入 Linux 界面，找到并进入你的 hugo-site 目录，由于刚才已经使用 git init 命令初始化过该目录，依次使用如下命令上传至 Github 仓库。
 
  
 
@@ -190,7 +237,7 @@ git commit -m '博客代码'
 git push --set-upstream origin master
 ```
 
-6、推送完成后，在 blog-site 目录下新建目录 .github，创建一个自动化发布博客的 .yml 配置文件。
+3、推送完成后，在 blog-site 目录下新建目录 .github，创建一个自动化发布博客的 .yml 配置文件。
 
 ```bash
 mkdir .github/workflows
@@ -198,7 +245,7 @@ cd ./.github/workflows
 vim myAction.yml
 ```
 
-7、在 myAction.yml 配置文件中填写如下信息。
+4、在 myAction.yml 配置文件中填写如下信息。
 
 ```yaml
 name: github pages
@@ -248,7 +295,7 @@ jobs:
           publish_dir: ./public
 ```
 
-8、在配置文件中需要修改的是 
+5、在配置文件中需要修改的是 
 
 - on:
   push:
@@ -269,7 +316,7 @@ jobs:
     PUBLISH_BRANCH： 如上图查看主分支名称填写
     
 
-9、还差一步，申请 Github token
+6、还差一步，申请 Github token
 
 - 进入 Github，右上角头像 → setting
 
@@ -301,7 +348,7 @@ jobs:
 
 ![Untitled](../images/Untitled%2016.png)
 
-10、最后，只需要用如下 git 命令上传到 myBlog 库中，每次写完博客文章 git push 推送完成后就可以自动执行 hugo 命令，生成在 public 目录下的所有文件上传至你的 Github Page，自动化生成你的博客网页。
+7、最后，只需要用如下 git 命令上传到 myBlog 库中，每次写完博客文章 git push 推送完成后就可以自动执行 hugo 命令，生成在 public 目录下的所有文件上传至你的 Github Page，自动化生成你的博客网页。
 
 ```bash
 git add .
@@ -309,6 +356,4 @@ git commit -m 'upload action config'
 git push
 ```
 
-大功告成了，输入网址 [yourname.github.io](http://yourname.github.io) ，现在快去看看你的博客吧，let`s go！
-
-
+至此，我们的 Hugo 博客就搭建完成了，每当我们通过 Markdown 语法完成博客内容编辑后，只需要推送至私人仓库，等待几分钟， Github Action 就会自动化发布你的博客，再通过 Github Page 上你的域名去访问更新后的博客。
