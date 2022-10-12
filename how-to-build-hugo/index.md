@@ -137,15 +137,15 @@ cd ./.ssh
 vim id_rsa.pub
 ```
 
-![Untitled](../images/Untitled%201.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%201.png)
 
 5、复制 id_rsa.pub 公钥，进入 Github 设置远程登陆。点击右上角头像 → Setting 。
 
-![Untitled](../images/Untitled%202.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%202.png)
 
 6、会看到左边这些目录，选择 SSH and GPG keys。
 
-![Untitled](../images/Untitled%203.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%203.png)
 
 7、创建 New SSH key，粘贴你的公钥到 key 中，Title 可以随意设置，Key type 默认第一个即可。使用下面的命令测试以下配置是否成功。
 
@@ -155,21 +155,21 @@ ssh -T git@github.com
 
 8、看到以下信息 Github SSH key 就配置成功了。
 
-![Untitled](../images/Untitled%204.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%204.png)
 
 ### （二）创建 Github Page 页面
 
 1、首先，登录到 Github，右上角头像选择 Your repositories
 
-![Untitled](../images/Untitled%205.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%205.png)
 
  2、选择 New
 
-![Untitled](../images/Untitled%206.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%206.png)
 
  3、在 Repository name 一栏填写你的 Github 名称 + github.io，eg: sihe-gg.github.io。我已经创建过了，所以填写了 yourname.github.io，把 yourname 换成你的 github 名称。
 
-![Untitled](../images/Untitled%207.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%207.png)
 
 ### （三）部署博客到 Github Page
 
@@ -220,7 +220,7 @@ Github Action 是一个持续集成和持续交付（CI/CD）平台，可用于�
 
 1、再创建一个仓库名为 myBlog，并设为私有 Private
 
-![Untitled](../images/Untitled%208.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%208.png)
 
 2、现在应该上传我们的 hugo-site 目录到 myBlog 仓库，进入 Linux 界面，找到并进入你的 hugo-site 目录，由于刚才已经使用 git init 命令初始化过该目录，依次使用如下命令上传至 Github 仓库。
 
@@ -302,7 +302,7 @@ jobs:
     branches:
       - main # 这里修改为 myBlog 的主分支名称
 
-![Untitled](../images/Untitled%209.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%209.png)
 
 如上图，我的 branches 需要修改为 main → master。
 
@@ -320,33 +320,33 @@ jobs:
 
 - 进入 Github，右上角头像 → setting
 
-![Untitled](../images/Untitled%202.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%202.png)
 
 - 左边菜单栏选择最底部 Developer settings → Personal access tokens
 
-![Untitled](../images/Untitled%2010.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%2010.png)
 
-![Untitled](../images/Untitled%2011.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%2011.png)
 
 - 选择 Generate new token，再次输入密码后，进入页面，注意：需要在 Select scopes 中勾选 repo 和 workflow，Expiration 过期日期写的长一点。
 
-![Untitled](../images/Untitled%2012.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%2012.png)
 
 - 点击 Generate token，复制新生成的 token，注意：只显示一次，不要弄丢。
 
-![Untitled](../images/Untitled%2013.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%2013.png)
 
 - 进入 myBlog 页面，点击 Settings
 
-![Untitled](../images/Untitled%2014.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%2014.png)
 
 - 选择 Secrets → Actions → New repository secret
 
-![Untitled](../images/Untitled%2015.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%2015.png)
 
 - Name 填写 PERSONAL_TOKEN，Secret 填写刚刚申请的 token
 
-![Untitled](../images/Untitled%2016.png)
+![Untitled](/posts/how-to-build-hugo/image/Untitled%2016.png)
 
 7、最后，只需要用如下 git 命令上传到 myBlog 库中，每次写完博客文章 git push 推送完成后就可以自动执行 hugo 命令，生成在 public 目录下的所有文件上传至你的 Github Page，自动化生成你的博客网页。
 
