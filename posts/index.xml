@@ -11,5 +11,13 @@
     <guid>http://sihe-gg.github.io/how-to-build-hugo/</guid>
     <description><![CDATA[Hugo 博客搭建 + 使用 Github Page 部署作为站点并用 Github Action 自动部署站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以]]></description>
 </item>
+<item>
+    <title>Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点</title>
+    <link>http://sihe-gg.github.io/how-to-build-hugo/</link>
+    <pubDate>Sun, 09 Oct 2022 17:12:41 &#43;0800</pubDate>
+    <author>pinkman</author>
+    <guid>http://sihe-gg.github.io/how-to-build-hugo/</guid>
+    <description><![CDATA[Hugo 博客搭建 + 使用 Github Page 部署作为站点并用 Github Action 自动部署站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以]]></description>
+</item>
 </channel>
 </rss>
