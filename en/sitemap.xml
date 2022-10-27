@@ -2,30 +2,30 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://sihe-gg.github.io/en/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://pinkman.eu.org/en/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://sihe-gg.github.io/categories/"
+                        href="http://pinkman.eu.org/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://sihe-gg.github.io/en/categories/"
+                    href="http://pinkman.eu.org/en/categories/"
                     /></url><url>
-            <loc>http://sihe-gg.github.io/en/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://pinkman.eu.org/en/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://sihe-gg.github.io/"
+                        href="http://pinkman.eu.org/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://sihe-gg.github.io/en/"
+                    href="http://pinkman.eu.org/en/"
                     /></url><url>
-            <loc>http://sihe-gg.github.io/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://pinkman.eu.org/en/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="http://sihe-gg.github.io/tags/"
+                        href="http://pinkman.eu.org/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://sihe-gg.github.io/en/tags/"
+                    href="http://pinkman.eu.org/en/tags/"
                     /></url></urlset>

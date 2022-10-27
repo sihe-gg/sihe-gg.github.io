@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: http://sihe-gg.github.io/en/sitemap.xml
+Sitemap: http://pinkman.eu.org/en/sitemap.xml

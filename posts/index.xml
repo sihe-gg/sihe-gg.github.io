@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - pinkman`s blog</title>
-        <link>http://sihe-gg.github.io/posts/</link>
+        <link>http://pinkman.eu.org/posts/</link>
         <description>所有文章 | pinkman`s blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 09 Oct 2022 17:12:41 &#43;0800</lastBuildDate><atom:link href="http://sihe-gg.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 09 Oct 2022 17:12:41 &#43;0800</lastBuildDate><atom:link href="http://pinkman.eu.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点</title>
-    <link>http://sihe-gg.github.io/how-to-build-hugo/</link>
+    <link>http://pinkman.eu.org/how-to-build-hugo/</link>
     <pubDate>Sun, 09 Oct 2022 17:12:41 &#43;0800</pubDate>
     <author>pinkman</author>
-    <guid>http://sihe-gg.github.io/how-to-build-hugo/</guid>
+    <guid>http://pinkman.eu.org/how-to-build-hugo/</guid>
     <description><![CDATA[Hugo 博客搭建 + 使用 Github Page 部署作为站点并用 Github Action 自动部署站点 一、概述 作为一名程序员，需要有自己的博客记录一些学习笔记，所以记录自己搭建博客的过程，以]]></description>
 </item>
 </channel>
