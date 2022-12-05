@@ -6,6 +6,22 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 05 Dec 2022 16:55:41 &#43;0800</lastBuildDate>
             <atom:link href="http://pinkman.eu.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>DispathcerServlet Spring Web 简易框架</title>
+    <link>http://pinkman.eu.org/dispathcerservlet/</link>
+    <pubDate>Mon, 05 Dec 2022 16:55:41 &#43;0800</pubDate>
+    <author>pinkman</author>
+    <guid>http://pinkman.eu.org/dispathcerservlet/</guid>
+    <description><![CDATA[DispathcerServlet Spring Web 简易框架 准备 applicationContext.xml 对应 bean 1 2 3 4 5 6 7 8 9 10 11 12 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;beans&gt; &lt;bean id=&#34;fruitDao&#34; class=&#34;com.test.dao.FruitDao&#34;/&gt; &lt;bean id=&#34;fruitService&#34; class=&#34;com.test.service.impl.FruitServiceImpl&#34;&gt; &lt;property name=&#34;fruitDao&#34; ref=&#34;fruitDao&#34;/&gt; &lt;/bean&gt; &lt;bean id=&#34;fruit&#34; class=&#34;com.test.controller.FruitController&#34;&gt; &lt;property name=&#34;fruitService&#34; ref=&#34;fruitService&#34;/&gt; &lt;/bean&gt; &lt;/beans&gt; 通过实现 ServletContextListener 监听器接口，并重写 contextInitialized 方法获取 BeanFactory 对象放]]></description>
+</item>
+<item>
+    <title>JavaWeb 学习笔记</title>
+    <link>http://pinkman.eu.org/javaweb/</link>
+    <pubDate>Mon, 05 Dec 2022 16:55:41 &#43;0800</pubDate>
+    <author>pinkman</author>
+    <guid>http://pinkman.eu.org/javaweb/</guid>
+    <description><![CDATA[JavaWeb 学习笔记 一、Servlet web.xml 中配置 servlet 映射 1 2 3 4 5 6 7 8 9 &lt;servlet&gt; &lt;servlet-name&gt;AddServlet&lt;/servlet-name&gt; &lt;servlet-class&gt;com.test.servlets.AddServlet&lt;/servlet-class&gt; &lt;/servlet&gt; &lt;servlet-mapping&gt; &lt;servlet-name&gt;AddServlet&lt;/servlet-name&gt; &lt;url-pattern&gt;/add&lt;/url-pattern&gt; &lt;/servlet-mapping&gt; 💡 request → url-pattern → AddServlet → servlet 对应的 servlet-name → 找到 servlet-calss 方法 → doPost() POST 方式下，设置编码，防止]]></description>
+</item>
+<item>
     <title>Hugo 博客搭建 &#43; 使用 Github 部署作为自己的站点</title>
     <link>http://pinkman.eu.org/how-to-build-hugo/</link>
     <pubDate>Sun, 09 Oct 2022 17:12:41 &#43;0800</pubDate>

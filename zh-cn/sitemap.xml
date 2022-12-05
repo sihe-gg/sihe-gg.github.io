@@ -2,8 +2,8 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://pinkman.eu.org/summarize/java/hello/</loc><lastmod>2022-12-05T16:55:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://pinkman.eu.org/summarize/java/hello/</loc><lastmod>2022-12-05T16:55:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://pinkman.eu.org/dispathcerservlet/</loc><lastmod>2022-12-05T16:55:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://pinkman.eu.org/javaweb/</loc><lastmod>2022-12-05T16:55:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://pinkman.eu.org/</loc><lastmod>2022-12-05T16:55:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -13,9 +13,8 @@
                     hreflang="zh-cn"
                     href="http://pinkman.eu.org/"
                     /></url><url>
-            <loc>http://pinkman.eu.org/summarize/</loc><lastmod>2022-12-05T16:55:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://pinkman.eu.org/posts/</loc><lastmod>2022-12-05T16:55:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://pinkman.eu.org/how-to-build-hugo/</loc><lastmod>2022-10-09T17:12:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://pinkman.eu.org/posts/</loc><lastmod>2022-10-09T17:12:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://pinkman.eu.org/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
