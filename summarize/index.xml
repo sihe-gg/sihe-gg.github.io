@@ -6,22 +6,23 @@
     <description>Recent content in Summarizes on pinkman`s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://pinkman.eu.org/summarize/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 05 Dec 2022 16:55:41 +0800</lastBuildDate><atom:link href="http://pinkman.eu.org/summarize/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://pinkman.eu.org/summarize/java/dispathcerservlet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>DispathcerServlet Spring Web 简易框架</title>
+      <link>http://pinkman.eu.org/summarize/java/hello/</link>
+      <pubDate>Mon, 05 Dec 2022 16:55:41 +0800</pubDate>
       
-      <guid>http://pinkman.eu.org/summarize/java/dispathcerservlet/</guid>
+      <guid>http://pinkman.eu.org/summarize/java/hello/</guid>
       <description>DispathcerServlet Spring Web 简易框架 准备 applicationContext.xml 对应 bean 1 2 3 4 5 6 7 8 9 10 11 12 &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;beans&amp;gt; &amp;lt;bean id=&amp;#34;fruitDao&amp;#34; class=&amp;#34;com.test.dao.FruitDao&amp;#34;/&amp;gt; &amp;lt;bean id=&amp;#34;fruitService&amp;#34; class=&amp;#34;com.test.service.impl.FruitServiceImpl&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;fruitDao&amp;#34; ref=&amp;#34;fruitDao&amp;#34;/&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;bean id=&amp;#34;fruit&amp;#34; class=&amp;#34;com.test.controller.FruitController&amp;#34;&amp;gt; &amp;lt;property name=&amp;#34;fruitService&amp;#34; ref=&amp;#34;fruitService&amp;#34;/&amp;gt; &amp;lt;/bean&amp;gt; &amp;lt;/beans&amp;gt; 通过实现 ServletContextListener 监听器接口，并重写 contextInitialized 方法获取 BeanFactory 对象放</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://pinkman.eu.org/summarize/java/javaweb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>JavaWeb 学习笔记</title>
+      <link>http://pinkman.eu.org/summarize/java/hello/</link>
+      <pubDate>Mon, 05 Dec 2022 16:55:41 +0800</pubDate>
       
-      <guid>http://pinkman.eu.org/summarize/java/javaweb/</guid>
+      <guid>http://pinkman.eu.org/summarize/java/hello/</guid>
       <description>JavaWeb 学习笔记 一、Servlet web.xml 中配置 servlet 映射 1 2 3 4 5 6 7 8 9 &amp;lt;servlet&amp;gt; &amp;lt;servlet-name&amp;gt;AddServlet&amp;lt;/servlet-name&amp;gt; &amp;lt;servlet-class&amp;gt;com.test.servlets.AddServlet&amp;lt;/servlet-class&amp;gt; &amp;lt;/servlet&amp;gt; &amp;lt;servlet-mapping&amp;gt; &amp;lt;servlet-name&amp;gt;AddServlet&amp;lt;/servlet-name&amp;gt; &amp;lt;url-pattern&amp;gt;/add&amp;lt;/url-pattern&amp;gt; &amp;lt;/servlet-mapping&amp;gt; 💡 request → url-pattern → AddServlet → servlet 对应的 servlet-name → 找到 servlet-calss 方法 → doPost() POST 方式下，设置编码，防止</description>
     </item>
     
