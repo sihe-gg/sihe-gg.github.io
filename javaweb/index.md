@@ -111,7 +111,7 @@
 
 ### DispatcherServlet 和 Ioc 整合，Spring 框架底层原理
 
-[简易版 String 框架实现](/posts/java/DispathcerServlet.md)
+[简易版 String 框架实现](/dispathcerservlet)
 
 ## 四、Filter
 
